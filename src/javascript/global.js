@@ -5,27 +5,48 @@ var rivets          = require('rivets');
 var ptStrings       = require('./pt.json');
 var enStrings       = require('./en.json');
 
+var appLang         = "en";
+var appLocale       = "local";
 var appData         = {};
 var data;
 var dataServer      = "http://54.213.20.132/data.json";
 
-var currentLanguage = "en";
-
 appData.strings = enStrings;
 appData.date = getMonth();
+appData.langEn = true;
+appData.searchLocal = true;
+appData.searchGlobal = false;
 
 rivets.bind(document.getElementById('app'), appData);
 
 document.getElementById('en').addEventListener('click', function(e) {
-    e.target.className += 'selected';
+    appData.langEn = true;
+    appData.langPt = false;
+    appLang = "en";
     appData.strings = enStrings;
-    appData.questions = parseQuestions(data[0]["en_global"]);
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
 });
 
 document.getElementById('pt').addEventListener('click', function(e) {
-    e.target.className += 'selected';
+    appData.langPt = true;
+    appData.langEn = false;
+    appLang = "pt";
     appData.strings = ptStrings;
-    appData.questions = parseQuestions(data[0]["pt_global"]);
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+});
+
+document.getElementById('local').addEventListener('click', function(e) {
+    appData.searchLocal = true;
+    appData.searchGlobal = false;
+    appLocale = "local";
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+});
+
+document.getElementById('global').addEventListener('click', function(e) {
+    appData.searchLocal = false;
+    appData.searchGlobal = true;
+    appLocale = "global";
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
 });
 
 var request = new XMLHttpRequest();
@@ -34,7 +55,7 @@ request.open('GET', dataServer, true);
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     data = JSON.parse(request.responseText);
-    appData.questions = parseQuestions(data[0]["en_global"]);
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
   }
 };
 

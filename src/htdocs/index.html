@@ -10,8 +10,8 @@
 <body>
 	<div id ="app">
 		<header>
-			<span id="en" class="selected">{  strings.header_english }</span>
-			<span id="pt">{ strings.header_portugese }</span>
+			<span id="en" rv-class-selected="langEn">{  strings.header_english }</span>
+			<span id="pt" rv-class-selected="langPt">{ strings.header_portugese }</span>
 		</header>
 		<main>
 			<h3>{ strings.subhead } </h3>
@@ -27,8 +27,8 @@
 					<h2>{ strings.top_olympic_searches }
 
 					<div class="tabs">
-						<span class="tab selected">{ strings.brazil }</span>
-						<span class="tab">{ strings.world }</span>
+						<span id="local" rv-class-selected="searchLocal">{ strings.brazil }</span>
+						<span id="global" rv-class-selected="searchGlobal">{ strings.world }</span>
 					</div>
 
 					<ol>
