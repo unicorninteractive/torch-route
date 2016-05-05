@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>reply icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="reply-icon" transform="translate(11.085874, 9.085874) scale(-1, 1) translate(-11.085874, -9.085874) translate(-3.000000, -5.000000)">
+            <rect id="bounds" x="0" y="0" width="28.1717486" height="28.1717486"></rect>
+            <path d="M3.52146857,14.0858743 L11.7382286,22.3026343 L11.7382286,17.4899606 C17.606169,17.4899606 21.7157229,19.3680772 24.65028,23.4764572 C23.4764572,17.6073429 19.9549886,11.7382286 11.7382286,10.5644057 L11.7382286,5.86911429 L3.52146857,14.0858743 Z" id="reply" fill="#BEBEBE" opacity="0.95400416"></path>
+        </g>
+    </g>
+</svg>
