@@ -8,6 +8,8 @@ var enStrings       = require('./en.json');
 
 var dataServer      = "http://54.213.20.132/data.json";
 
+enStrings["data"] = ["string", "another string"];
+
 var htmlEnglish      = template(enStrings);
 var htmlPortugese    = template(ptStrings);
 
@@ -27,7 +29,7 @@ request.open('GET', dataServer, true);
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     var data = JSON.parse(request.responseText);
-    console.log(data);
+    console.log(data[0]);
   }
 };
 

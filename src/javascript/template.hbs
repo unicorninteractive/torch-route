@@ -16,7 +16,9 @@
 		<section class="questions">
 			<h2>{{ top_olympic_searches }}
 			<ol>
-				<li>{{ question }}</li>
+			{{#each data}}
+				<li>{{ this }}</li>
+			{{/each}}
 			</ol>
 			{{ date }}
 		</section>
