@@ -1,0 +1,101 @@
+$backgroundColor: #002337;
+$orange: #EB7D08;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: $backgroundColor;
+}
+
+header {
+	height: 40px;
+	background-color: #002C45;
+	margin-bottom: 40px;
+	font-family: "Roboto";
+	font-weight: 300;
+	border-bottom: 1px solid #405764;
+
+	span {
+		color: #6B7A82;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&.selected {
+			color: $orange;
+		}
+	}
+}
+
+.progress {
+	width: 100%;
+	margin: 40px 0;
+}
+
+h1 {
+	color: $orange;
+	font-family: "Roboto";
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+
+footer {
+	color: #A5A6A6;
+}
+
+main {
+	margin: 0 2vw;
+}
+
+div.columns {
+	display: flex;
+}
+
+section.map {
+	background-color: red;
+	min-height: 400px;
+	min-width: 400px;
+	flex: 1;
+	margin-right: 1vw;
+}
+
+section.questions {
+	background-color: #002C45;
+	color: $orange;
+	border-top: 1px solid #2E596F;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+	padding: 10px;
+	flex: 1;
+	margin-left: 1vw;
+
+	h2 {
+		font-weight: 300;
+		font-family: "Roboto";
+		text-transform: uppercase;
+	}
+
+	ol {
+		padding-bottom: 40px;
+	}
+}
+
+footer {
+	font-family: "Roboto";
+	margin-top: 30px;
+	text-align: right;
+	margin-right: 2vw;
+
+	a {
+		text-decoration: none;
+		color: gray;
+
+		&:hover {
+			border-bottom: 1px solid gray;
+		}
+	}
+}
