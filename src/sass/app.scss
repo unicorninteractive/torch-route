@@ -19,15 +19,28 @@ header {
 	font-family: "Roboto";
 	font-weight: 300;
 	border-bottom: 1px solid #405764;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.7);
 
 	span {
 		color: #6B7A82;
 		text-transform: uppercase;
 		cursor: pointer;
+		padding-left: 2vw;
+		line-height: 40px;
 
 		&.selected {
 			color: $orange;
 		}
+	}
+}
+
+main {
+	h3 {
+		font-family: "Roboto";
+		color: white;
+		font-weight: 300;
+		font-size: 14px;
+		-webkit-font-rendering: subpixel-antialised;
 	}
 }
 
@@ -97,5 +110,16 @@ footer {
 		&:hover {
 			border-bottom: 1px solid gray;
 		}
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	.columns {
+		flex-direction: column !important;
+	}
+
+	.columns section {
+		margin: 2vw 0 0 0;
 	}
 }
