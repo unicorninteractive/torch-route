@@ -1,42 +1,26 @@
-// Project files
-require('./date');
-
 // Library files
-var handlebars      = require('handlebars');
-var template        = require('./template.hbs');
+var rivets          = require('rivets');
 
 // Localization files
 var ptStrings       = require('./pt.json');
 var enStrings       = require('./en.json');
 
+var appData         = {};
 var dataServer      = "http://54.213.20.132/data.json";
 
-enStrings["data"] = [
-    "Question One",
-    "Question Two",
-    "Question Three",
-    "Question Four",
-    "Question Five",
-    "Question Six",
-    "Question Seven",
-    "Question Eight",
-    "Question Nine",
-    "Question Ten"
-];
+appData.strings = enStrings;
+appData.date = getMonth();
 
-enStrings["date"] = getMonth();
-
-var htmlEnglish      = template(enStrings);
-var htmlPortugese    = template(ptStrings);
-
-document.getElementById('app').innerHTML = htmlEnglish;
+rivets.bind(document.getElementById('app'), appData);
 
 document.getElementById('en').addEventListener('click', function(e) {
-    document.getElementById('app').innerHTMl = htmlEnglish;
+    e.target.className += 'selected';
+    appData.strings = enStrings;
 });
 
 document.getElementById('pt').addEventListener('click', function(e) {
-    document.getElementById('app').innerHTML = htmlPortugese;
+    e.target.className += 'selected';
+    appData.strings = ptStrings;
 });
 
 var request = new XMLHttpRequest();
@@ -45,12 +29,16 @@ request.open('GET', dataServer, true);
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     var data = JSON.parse(request.responseText);
-    console.log(data[0]);
+    appData.questions = parseQuestions(data[0]["en_global"]);
   }
 };
 
 request.send();
 
+function parseQuestions(string) {
+    var stringArray = string.split(/\r?\n/);
+    return stringArray;
+}
 
 function getMonth() {
     var d = new Date();

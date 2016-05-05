@@ -8,7 +8,40 @@
   <link rel="stylesheet" href="app.css" />
 </head>
 <body>
-	<div id ="app"></div>
+	<div id ="app">
+		<header>
+			<span id="en" class="selected">{  strings.header_english }</span>
+			<span id="pt">{ strings.header_portugese }</span>
+		</header>
+		<main>
+			<h3>{ strings.subhead } </h3>
+			<h1>{ strings.where_is_the_olympic_torch }</h1>
+
+			<input type="range" class="progress" name="points" min="0" max="90">
+
+			<div class="columns">
+				<section class="map">
+					{ map }
+				</section>
+				<section class="questions">
+					<h2>{ strings.top_olympic_searches }
+
+					<div class="tabs">
+						<span class="tab selected">{ strings.brazil }</span>
+						<span class="tab">{ strings.world }</span>
+					</div>
+
+					<ol>
+						<li rv-each-question="questions"><a href="http://www.google.com/search?q={ question }" target="_blank">{ question }</a></li>
+					</ol>
+					<span class="date">{ date }</span>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<a href="http://interactiveunicorn.com" target="_blank">{ strings.footer }</a>
+		</footer>
+	</div>
 	<script src="global.js"></script>
 </body>
 </html>

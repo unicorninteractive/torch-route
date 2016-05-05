@@ -15,6 +15,12 @@
 		</section>
 		<section class="questions">
 			<h2>{{ top_olympic_searches }}
+
+			<div class="tabs">
+				<span class="tab selected">Brazil</span>
+				<span class="tab">World</span>
+			</div>
+
 			<ol>
 			{{#each data}}
 				<li><a href="http://www.google.com/search?q={{ this }}" target="_blank">{{ this }}</a></li>

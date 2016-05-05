@@ -67,6 +67,24 @@ h1 {
 	font-size: 16px;
 }
 
+.tabs {
+	display: flex;
+	margin: 20px 0 0 0;
+
+	span {
+		flex: 1;
+		color: #687F8B;
+		font-size: 16px;
+		text-align: center;
+		cursor: pointer;
+		font-weight: normal;
+
+		&.selected {
+			color: $orange;
+		}
+	}
+}
+
 footer {
 	color: #A5A6A6;
 }
@@ -99,6 +117,7 @@ section.questions {
 		font-weight: 300;
 		font-family: "Roboto";
 		text-transform: uppercase;
+		margin-top: 5px;
 	}
 
 	ol {
