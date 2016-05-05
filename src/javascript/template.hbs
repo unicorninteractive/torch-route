@@ -17,7 +17,7 @@
 			<h2>{{ top_olympic_searches }}
 			<ol>
 			{{#each data}}
-				<li>{{ this }}</li>
+				<li><a href="http://www.google.com/search?q={{ this }}" target="_blank">{{ this }}</a></li>
 			{{/each}}
 			</ol>
 			{{ date }}
