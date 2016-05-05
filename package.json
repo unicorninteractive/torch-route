@@ -1,0 +1,43 @@
+{
+  "name": "torch-route",
+  "version": "1.0.0",
+  "license": "MIT",
+  "url": "http://googletrends.github.io/torch-route/",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unicorn-interactive/torch-route.git"
+  },
+  "browserify": {
+    "transform": [
+      "hbsfy"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "browserify": "*",
+    "google-spreadsheet": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-filesize": "*",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-rev-all": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "hbsfy": "^2.7.0",
+    "lodash": "*",
+    "pretty-hrtime": "*",
+    "require-dir": "*",
+    "underscore": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  }
+}
