@@ -6,7 +6,10 @@ var ptStrings       = require('./pt.json');
 var enStrings       = require('./en.json');
 
 var appData         = {};
+var data;
 var dataServer      = "http://54.213.20.132/data.json";
+
+var currentLanguage = "en";
 
 appData.strings = enStrings;
 appData.date = getMonth();
@@ -16,11 +19,13 @@ rivets.bind(document.getElementById('app'), appData);
 document.getElementById('en').addEventListener('click', function(e) {
     e.target.className += 'selected';
     appData.strings = enStrings;
+    appData.questions = parseQuestions(data[0]["en_global"]);
 });
 
 document.getElementById('pt').addEventListener('click', function(e) {
     e.target.className += 'selected';
     appData.strings = ptStrings;
+    appData.questions = parseQuestions(data[0]["pt_global"]);
 });
 
 var request = new XMLHttpRequest();
@@ -28,7 +33,7 @@ request.open('GET', dataServer, true);
 
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
-    var data = JSON.parse(request.responseText);
+    data = JSON.parse(request.responseText);
     appData.questions = parseQuestions(data[0]["en_global"]);
   }
 };
