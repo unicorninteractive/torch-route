@@ -41,7 +41,7 @@ main {
 		font-family: "Roboto";
 		color: white;
 		font-weight: 300;
-		font-size: 14px;
+		font-size: 16px;
 		-webkit-font-rendering: subpixel-antialised;
 	}
 }
@@ -57,6 +57,14 @@ h1 {
 	font-weight: 300;
 	text-transform: uppercase;
 	margin: 0 auto;
+}
+
+.date {
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: none;
+	font-size: 16px;
 }
 
 footer {
@@ -95,12 +103,26 @@ section.questions {
 
 	ol {
 		padding-bottom: 40px;
+		counter-reset: item;
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
 	}
 
 	li {
 		color: white;
 		font-weight: 300;
 		margin-bottom: 20px;
+		text-transform: none;
+		display: block;
+
+		&:before {
+			content: counter(item) " ";
+			counter-increment: item;
+			color: orange;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
 	}
 
 	li a {
