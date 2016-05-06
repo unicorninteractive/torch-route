@@ -32,6 +32,7 @@
     "watchify": "*"
   },
   "dependencies": {
+    "d3": "^3.5.17",
     "dialog-polyfill": "^0.4.3",
     "rivets": "^0.8.1"
   }

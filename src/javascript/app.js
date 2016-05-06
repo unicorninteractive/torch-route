@@ -2,6 +2,9 @@
 var rivets          = require('rivets');
 var dialog          = require('dialog-polyfill');
 
+// Project files
+require('./timeline');
+
 // Localization files
 var ptStrings       = require('./pt.json');
 var enStrings       = require('./en.json');
