@@ -31,6 +31,8 @@ document.getElementById('en').addEventListener('click', function(e) {
     appData.date = getMonth();
     appData.strings = enStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+    document.getElementById('start-label').innerHTML = enStrings.start_date;
+    document.getElementById('end-label').innerHTML = enStrings.start_date;
 });
 
 document.getElementById('pt').addEventListener('click', function(e) {
@@ -40,6 +42,8 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appData.date = getMonth();
     appData.strings = ptStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+    document.getElementById('start-label').innerHTML = ptStrings.start_date;
+    document.getElementById('end-label').innerHTML = ptStrings.end_date;
 });
 
 document.getElementById('local').addEventListener('click', function(e) {

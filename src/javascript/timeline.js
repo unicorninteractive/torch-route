@@ -30,10 +30,12 @@ var daySlider = svg.append('rect')
 
 var startLabel = svg.append('text')
                     .text('May 3')
+                    .attr('id', 'start-label')
                     .attr('y', '80px');
 
 var endLabel = svg.append('text')
                     .text('August 5')
+                    .attr('id', 'end-label')
                     .attr('y', '80px')
                     .attr('text-anchor', 'end')
                     .attr('x', width - 15);
