@@ -20,6 +20,7 @@ appData.date = getMonth();
 appData.langEn = true;
 appData.searchLocal = true;
 appData.searchGlobal = false;
+appData.currentDay = 0;
 
 rivets.bind(document.getElementById('app'), appData);
 
@@ -61,6 +62,15 @@ request.open('GET', dataServer, true);
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     data = JSON.parse(request.responseText);
+
+    for (var x in data) {
+      if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
+        appData.currentDay = x;
+      }
+    }
+    
+    console.log(appData.currentDay);
+
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
   }
 };
