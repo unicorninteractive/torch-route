@@ -1,5 +1,6 @@
 // Library files
 var rivets          = require('rivets');
+var dialog          = require('dialog-polyfill');
 
 // Localization files
 var ptStrings       = require('./pt.json');
@@ -113,4 +114,11 @@ document.getElementById('facebook-share').addEventListener('click', function(e) 
   var left = (screen.width / 2) - (w / 2);
   var href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(url);
   window.open(href, "facebook", "height=" + h + ",width=" + w + ",top=" + top + ",left=" + left + ",resizable=1");
+});
+
+var dialogs = document.querySelector('dialog');
+dialog.registerDialog(dialogs);
+
+document.getElementById('dialog-show').addEventListener('click', function(e) {
+  dialogs.showModal();
 });

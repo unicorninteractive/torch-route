@@ -28,6 +28,7 @@
 				<a href="https://www.google.com/trends/" target="_blank">
 					<img height="25" src="images/ui/trends.svg" />
 				</a>
+				<a href="#" id="dialog-show">Embed</a>
 			</div>
 		</header>
 		<main>
@@ -100,6 +101,14 @@
 			<a href="http://interactiveunicorn.com" target="_blank">{ strings.footer }</a>
 		</footer>
 	</div>
+	<dialog class="embed-dialog">
+		<h2>Embed</h2>
+		<p>This data is live and will keep updating. Paste this into any HTML page.</p>
+		<label for="embed-map">Map</label>
+    	<textarea id="embed-map" rows="5">Textarea</textarea>
+		<label for="embed-questions">Questions</label>
+    	<textarea id="embed-questions" rows="5">Textarea</textarea>
+	</dialog>
 	<script src="app.js"></script>
 </body>
 </html>

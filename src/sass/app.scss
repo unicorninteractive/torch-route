@@ -2,6 +2,7 @@ $backgroundColor: #002337;
 $orange: #EB7D08;
 
 @import "colors";
+@import "dialog";
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
@@ -13,7 +14,6 @@ html, body {
 body {
 	background-color: $backgroundColor;
 }
-
 
 header {
 	height: 40px;
@@ -181,6 +181,25 @@ section.questions {
 	li a {
 		text-decoration: none;
 		color: white;
+	}
+}
+
+.embed-dialog {
+	background-color: #002C45;
+	font-family: "Roboto";
+
+	h2 {
+		font-family: "Roboto";
+		font-size: 20px;
+		color: $orange;
+	}
+
+	label {
+		color: $orange;
+	}
+
+	textarea {
+		width: 100%;
 	}
 }
 
