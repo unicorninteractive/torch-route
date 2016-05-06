@@ -33,7 +33,7 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appLang = "pt";
     appData.strings = ptStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
-});3
+});
 
 document.getElementById('local').addEventListener('click', function(e) {
     appData.searchLocal = true;
@@ -87,3 +87,18 @@ function getMonth() {
 rivets.formatters.google = function(value) {
     return "https://www.google.com/search?q=" + value;
 };
+
+document.getElementById('twitter-share').addEventListener('click', function(e) {
+  if (appLang === "en") {
+    shareText = enStrings.twitter_share_text;
+  } else {
+    shareText = ptStrings.twitter_share_text;
+  }
+  var url = "http://googletrends.github.io/olympic-torch/";
+  var w = 550;
+  var h = 300;
+  var top = (screen.height / 2) - (h / 2);
+  var left = (screen.width / 2) - (w / 2);
+  var href = "http://twitter.com/share?text=" + shareText + "&url=" + encodeURI(url);
+  window.open(href, "twitter", "height=" + h + ",width=" + w + ",top=" + top + ",left=" + left + ",resizable=1");
+});
