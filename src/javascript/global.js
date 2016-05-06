@@ -102,3 +102,13 @@ document.getElementById('twitter-share').addEventListener('click', function(e) {
   var href = "http://twitter.com/share?text=" + shareText + "&url=" + encodeURI(url);
   window.open(href, "twitter", "height=" + h + ",width=" + w + ",top=" + top + ",left=" + left + ",resizable=1");
 });
+
+document.getElementById('facebook-share').addEventListener('click', function(e) {
+  var url = "http://googletrends.github.io/olympic-torch/";
+  var w = 600;
+  var h = 400;
+  var top = (screen.height / 2) - (h / 2);
+  var left = (screen.width / 2) - (w / 2);
+  var href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURI(url);
+  window.open(href, "facebook", "height=" + h + ",width=" + w + ",top=" + top + ",left=" + left + ",resizable=1");
+});

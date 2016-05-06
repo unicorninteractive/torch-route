@@ -104,6 +104,12 @@ main {
 	margin: 0 2vw;
 }
 
+.share-buttons {
+	img {
+		cursor: pointer;
+	}
+}
+
 div.columns {
 	display: flex;
 }
