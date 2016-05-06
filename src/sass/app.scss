@@ -189,9 +189,12 @@ section.questions {
 	font-family: "Roboto";
 
 	h2 {
-		font-family: "Roboto";
 		font-size: 20px;
 		color: $orange;
+	}
+
+	p {
+
 	}
 
 	label {
@@ -200,6 +203,9 @@ section.questions {
 
 	textarea {
 		width: 100%;
+		margin-bottom: 20px;
+		font-family: "Courier";
+		font-size: 12px;
 	}
 }
 
