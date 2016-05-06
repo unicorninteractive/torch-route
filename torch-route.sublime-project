@@ -1,20 +1,28 @@
 {
-    "folders":
-    [
-        {
-            "path": "src",
-            "folder_exclude_patterns": ["build", "dist"],
-            "name": "Source"
-        }
-    ],
-    "settings":
-    {
-        "tab_size": 4
-    },
-    "build_system": [
-        {
-            "name": "Preview",
-            "cmd": ["gulp"]
-        }
-    ]
+	"build_system":
+	[
+		{
+			"cmd":
+			[
+				"gulp"
+			],
+			"name": "Preview"
+		}
+	],
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"build",
+				"dist"
+			],
+			"name": "Source",
+			"path": "src"
+		}
+	],
+	"settings":
+	{
+		"tab_size": 4
+	}
 }

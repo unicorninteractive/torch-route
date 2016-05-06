@@ -31,11 +31,11 @@ module.exports = {
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
-      entries: src + '/javascript/global.js',
+      entries: src + '/javascript/app.js',
       dest: dest,
-      outputName: 'global.js',
+      outputName: 'app.js',
       // list of modules to make require-able externally
-      require: ['jquery', 'underscore']
+      // require: ['jquery', 'underscore']
     }]
   },
   production: {
