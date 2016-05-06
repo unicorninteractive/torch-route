@@ -41,7 +41,7 @@
         <g id="dialog" transform="translate(24.000000, 24.000000)">
             <g id="dialog-bg">
                 <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-                <use stroke="url(#linearGradient-1)" mask="url(#mask-5)" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use stroke="url(#linearGradient-1)" mask="url(#mask-5)" stroke-width="1" fill="#002C45" fill-rule="evenodd" xlink:href="#path-3"></use>
                 <use stroke="url(#linearGradient-2)" mask="url(#mask-6)" stroke-width="1" xlink:href="#path-3"></use>
             </g>
             <g id="buttons" transform="translate(0.000000, 123.000000)">
@@ -59,10 +59,10 @@
                     </text>
                 </g>
             </g>
-            <text id="Embed" font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400" line-spacing="28" fill-opacity="0.87" fill="#000000">
+            <text id="Embed" font-family="Roboto-Regular, Roboto" font-size="20" font-weight="normal" line-spacing="28" fill="#67879A">
                 <tspan x="19" y="42">Embed</tspan>
             </text>
-            <text id="This-data-is-live-an" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" line-spacing="24" fill-opacity="0.541326993" fill="#000000">
+            <text id="This-data-is-live-an" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" line-spacing="24" fill="#C2C5C7">
                 <tspan x="19" y="78">This data is live and will keep </tspan>
                 <tspan x="19" y="102">updating</tspan>
                 <tspan x="19" y="126">Past this into any HTML page:</tspan>
