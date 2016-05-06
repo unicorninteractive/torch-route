@@ -36,5 +36,12 @@ var endLabel = svg.append('text')
                     .attr('text-anchor', 'end')
                     .attr('x', width - 15);
 
+var scrubber = svg.append('g')
+                .attr('transform', 'translate(' + xScale(new Date()) + ', 20)');
+
+scrubber.append('text')
+        .text('May 6')
+        .attr('text-anchor', 'middle');
+
 var dateLabel = svg.append("path")
     .attr("d","M207.360705,23.2895215 L215.729245,37.2624245 L225.021802,23.2895215 L256.37424,23.2895215 L256.37424,-0.222750583 L178,-0.222750583 L178,23.2895215 L207.360705,23.2895215 Z");
