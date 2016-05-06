@@ -70,6 +70,7 @@ request.onload = function() {
     for (var x in data) {
       if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
         appData.currentDay = new Date(data[x].date);
+        appData.currentIndex = data[x].id;
         timeline(appData.currentDay);
       }
     }
@@ -105,6 +106,10 @@ function getMonth() {
 
 rivets.formatters.google = function(value) {
     return "https://www.google.com/search?q=" + value;
+};
+
+rivets.binders.mapSource = function(el, value) {
+  return "images/maps/map-" + String(value) + ".svg";
 };
 
 document.getElementById('twitter-share').addEventListener('click', function(e) {

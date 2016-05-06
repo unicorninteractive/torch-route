@@ -43,8 +43,7 @@ var endLabel = svg.append('text')
 var scrubber = svg.append('g');
 
 var dateLabel = scrubber.append("path")
-    .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z')
-    .attr('stroke', 'black');
+    .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z');
 
 scrubber.append('text')
         .attr('class', 'day-label')
