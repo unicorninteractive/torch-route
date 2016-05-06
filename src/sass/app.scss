@@ -157,7 +157,13 @@ section.questions {
 	box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
 	padding: 10px;
 	flex: 1;
+	font-family: "Roboto";
 	margin-left: 1vw;
+
+	.tabs {
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
 
 	h2 {
 		font-weight: 300;
@@ -165,13 +171,14 @@ section.questions {
 		text-transform: uppercase;
 		margin-top: 5px;
 		line-height: 35px;
+		margin-left: 10px;
 	}
 
 	ol {
 		padding-bottom: 40px;
 		counter-reset: item;
 		list-style-type: none;
-		margin-left: 0;
+		margin-left: 10px;
 		padding-left: 0;
 	}
 
@@ -181,7 +188,9 @@ section.questions {
 		margin-bottom: 1vw;
 		font-size: 18px;
 		text-transform: none;
-		display: block;
+		line-height: 35px;
+		display: table-row;
+		margin-left: 10px;
 
 		&:before {
 			content: counter(item) " ";
@@ -189,6 +198,8 @@ section.questions {
 			color: orange;
 			margin-right: 10px;
 			margin-left: 10px;
+			padding-right: 10px;
+			display: table-cell;
 		}
 	}
 

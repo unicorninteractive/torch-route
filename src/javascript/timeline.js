@@ -14,6 +14,13 @@ var xScale = d3.time.scale()
         .domain([new Date("2016-5-3"), new Date("2016-8-5")])
         .range([0, width]);
 
+function redrawTimeline() {
+    width = svgElement.clientWidth;
+    endLabel.attr('x', width - 15);
+    xScale.range([0, width]);
+    // daySlider.attr('width', xScale())
+}
+
 var backgroundRect = svg.append('rect')
                         .attr('class', 'timeline-bg')
                         .attr('x', 0)
@@ -53,8 +60,23 @@ scrubber.append('text')
 
 function updateTimeline(day) {
     d3.select('.day-label').text(timeFormat(day));
-
     scrubber.attr('transform', 'translate(' + (Math.floor(xScale(day)) - 14) + ', 0)');
 }
+
+var debounce = function(fn, timeout) {
+    var timeoutID = -1;
+    return function() {
+        if (timeoutID > -1) {
+            window.clearTimeout(timeoutID);
+        }
+    timeoutID = window.setTimeout(fn, timeout);
+    };
+};
+
+var debounceDraw = debounce(function() {
+    redrawTimeline();
+}, 125);
+
+d3.select(window).on('resize', debounceDraw);
 
 module.exports = updateTimeline;

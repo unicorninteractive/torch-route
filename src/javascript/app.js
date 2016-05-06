@@ -108,10 +108,6 @@ rivets.formatters.google = function(value) {
     return "https://www.google.com/search?q=" + value;
 };
 
-rivets.binders.mapSource = function(el, value) {
-  return "images/maps/map-" + String(value) + ".svg";
-};
-
 document.getElementById('twitter-share').addEventListener('click', function(e) {
   if (appLang === "en") {
     shareText = enStrings.twitter_share_text;
