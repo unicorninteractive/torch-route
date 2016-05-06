@@ -47,7 +47,8 @@ header {
 main {
 	h3 {
 		font-family: "Roboto";
-		color: white;
+		font-weight: 300;
+		color: $dialogtext;
 		margin-bottom: 0;
 		font-weight: 300;
 		font-size: 16px;
@@ -117,6 +118,10 @@ main {
 .share-buttons {
 	img {
 		cursor: pointer;
+		width: 2vw;
+		min-width: 20px;
+		height: 2vw;
+		min-height: 20px;
 	}
 }
 
@@ -194,7 +199,7 @@ section.questions {
 	}
 
 	p {
-
+		color: $dialogtext;
 	}
 
 	label {
