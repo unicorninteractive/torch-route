@@ -138,3 +138,12 @@ dialog.registerDialog(dialogs);
 document.getElementById('dialog-show').addEventListener('click', function(e) {
   dialogs.showModal();
 });
+
+dialogs.addEventListener('click', function (event) {
+    var rect = dialogs.getBoundingClientRect();
+    var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+      && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+    if (!isInDialog) {
+        dialogs.close();
+    }
+});
