@@ -4,7 +4,7 @@
     <title>Combined Shape</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M33.3607054,25.5122721 L41.7292451,39.4851751 L51.0218016,25.5122721 L82.3742404,25.5122721 L82.3742404,2 L4,2 L4,25.5122721 L33.3607054,25.5122721 Z" id="path-1"></path>
+        <path d="M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z" id="path-1"></path>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
