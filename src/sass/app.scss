@@ -22,6 +22,8 @@ header {
 	font-weight: 300;
 	border-bottom: 1px solid #405764;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+	display: flex;
+	align-items: center;
 
 	span {
 		color: #6B7A82;
@@ -121,6 +123,7 @@ section.questions {
 		font-family: "Roboto";
 		text-transform: uppercase;
 		margin-top: 5px;
+		line-height: 35px;
 	}
 
 	ol {
