@@ -83,7 +83,7 @@ function getMonth() {
       month[7] = ptStrings.august;
     }
 
-    return month[d.getMonth()] + " " + d.getDay();
+    return month[d.getMonth()] + " " + d.getDate();
 }
 
 rivets.formatters.google = function(value) {
