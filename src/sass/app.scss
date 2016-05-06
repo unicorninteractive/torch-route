@@ -24,6 +24,7 @@ header {
 	box-shadow: 0 2px 6px rgba(0,0,0,0.7);
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 	span {
 		color: #6B7A82;
@@ -36,6 +37,10 @@ header {
 			color: $orange;
 		}
 	}
+
+	.header-right {
+		margin-right: 2vw;
+	}
 }
 
 main {
@@ -45,6 +50,10 @@ main {
 		font-weight: 300;
 		font-size: 16px;
 		-webkit-font-rendering: subpixel-antialised;
+	}
+
+	.timeline {
+		margin: 20px 0;
 	}
 }
 
