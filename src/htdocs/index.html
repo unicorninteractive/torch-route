@@ -40,7 +40,9 @@
 					</div>
 
 					<ol>
-						<li rv-each-question="questions"><a href="http://www.google.com/search?q={ question }" target="_blank">{ question }</a></li>
+						<li rv-each-question="questions">
+							<a rv-href="question | google" target="_blank">{ question }</a>
+						</li>
 					</ol>
 					<span class="date">{ date }</span>
 				</section>
