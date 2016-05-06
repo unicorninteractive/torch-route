@@ -8,6 +8,8 @@ var svg = d3.select('.timeline')
 var svgElement = svg[0][0];
 var width = svgElement.clientWidth;
 
+var timeFormat = d3.time.format('%B %e');
+
 var xScale = d3.time.scale()
         .domain([new Date("2016-5-3"), new Date("2016-8-5")])
         .range([0, width]);
@@ -41,7 +43,14 @@ var scrubber = svg.append('g')
 
 scrubber.append('text')
         .text('May 6')
+        .attr('id', 'day-label')
         .attr('text-anchor', 'middle');
 
 var dateLabel = svg.append("path")
     .attr("d","M207.360705,23.2895215 L215.729245,37.2624245 L225.021802,23.2895215 L256.37424,23.2895215 L256.37424,-0.222750583 L178,-0.222750583 L178,23.2895215 L207.360705,23.2895215 Z");
+
+function updateTimeline(day) {
+    d3.select('#day-label').text(timeFormat(day));
+}
+
+module.exports = updateTimeline;

@@ -3,7 +3,7 @@ var rivets          = require('rivets');
 var dialog          = require('dialog-polyfill');
 
 // Project files
-require('./timeline');
+var timeline        = require('./timeline');
 
 // Localization files
 var ptStrings       = require('./pt.json');
@@ -65,11 +65,10 @@ request.onload = function() {
 
     for (var x in data) {
       if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
-        appData.currentDay = x;
+        appData.currentDay = new Date(data[x].date);
+        timeline(appData.currentDay);
       }
     }
-    
-    console.log(appData.currentDay);
 
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
   }

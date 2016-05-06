@@ -19,6 +19,9 @@ body {
 
 header {
 	height: 40px;
+	position: fixed;
+	width: 100%;
+	top: 0;
 	background-color: #002C45;
 	margin-bottom: 10px;
 	font-family: "Roboto";
