@@ -23,6 +23,7 @@ document.getElementById('en').addEventListener('click', function(e) {
     appData.langEn = true;
     appData.langPt = false;
     appLang = "en";
+    appData.date = getMonth();
     appData.strings = enStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
 });
@@ -31,6 +32,7 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appData.langPt = true;
     appData.langEn = false;
     appLang = "pt";
+    appData.date = getMonth();
     appData.strings = ptStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
 });
@@ -69,18 +71,18 @@ function parseQuestions(string) {
 function getMonth() {
     var d = new Date();
     var month = [];
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+    month[4] = enStrings.may;
+    month[5] = enStrings.june;
+    month[6] = enStrings.july;
+    month[7] = enStrings.august;
+
+    if (appLang == "pt") {
+      month[4] = ptStrings.may;
+      month[5] = ptStrings.june;
+      month[6] = ptStrings.july;
+      month[7] = ptStrings.august;
+    }
+
     return month[d.getMonth()] + " " + d.getDay();
 }
 
