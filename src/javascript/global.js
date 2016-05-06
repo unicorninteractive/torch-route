@@ -33,7 +33,7 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appLang = "pt";
     appData.strings = ptStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
-});
+});3
 
 document.getElementById('local').addEventListener('click', function(e) {
     appData.searchLocal = true;
@@ -83,3 +83,7 @@ function getMonth() {
     month[11] = "December";
     return month[d.getMonth()] + " " + d.getDay();
 }
+
+rivets.formatters.google = function(value) {
+    return "https://www.google.com/search?q=" + value;
+};
