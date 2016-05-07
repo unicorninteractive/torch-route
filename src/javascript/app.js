@@ -209,8 +209,10 @@ var leftArrow = svg.append('path')
                     .on('click', function() {
                         if (appData.currentIndex > 1) {
                           appData.currentIndex--;
+                          appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
                           appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
                           appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
+                          updateTimeline(appData.currentDay);
                         }
                     });
 
@@ -221,8 +223,10 @@ var rightArrow = svg.append('path')
                     .on('click', function() {
                         if (appData.currentIndex < appData.maxIndex) {
                           appData.currentIndex++;
+                          appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
                           appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
                           appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
+                          updateTimeline(appData.currentDay);
                         }
                     });
 
