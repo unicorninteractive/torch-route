@@ -184,29 +184,29 @@ var backgroundRect = svg.append('rect')
                         .attr('x', 30)
                         .attr('y', 30)
                         .attr('width', width - 60)
-                        .attr('height', 30);
+                        .attr('height', 20);
 
 var daySlider = svg.append('rect')
                     .attr('class', 'timeline-fg')
                     .attr('x', 30)
                     .attr('y', 30)
                     .attr('width', 0)
-                    .attr('height', 30);
+                    .attr('height', 20);
 
 var startLabel = svg.append('text')
                     .text('May 3')
                     .attr('id', 'start-label')
-                    .attr('y', '80px');
+                    .attr('y', '70px');
 
 var endLabel = svg.append('text')
                     .text('August 5')
                     .attr('id', 'end-label')
-                    .attr('y', '80px')
+                    .attr('y', '70px')
                     .attr('text-anchor', 'end')
                     .attr('x', (width - 15) + "px");
 
 var leftArrow = svg.append('path')
-                    .attr('d', 'M20 0 L20 30 L0 15 Z')
+                    .attr('d', 'M20 0 L20 20 L0 10 Z')
                     .attr('transform', 'translate(0, 30)')
                     .attr('class', 'left-arrow')
                     .on('click', function() {
@@ -220,7 +220,7 @@ var leftArrow = svg.append('path')
                     });
 
 var rightArrow = svg.append('path')
-                    .attr('d', 'M0 0 L20 15 L0 30 Z')
+                    .attr('d', 'M0 0 L20 10 L0 20 Z')
                     .attr('transform', 'translate(' + (width - 20) + ', 30)')
                     .attr('class', 'right-arrow')
                     .on('click', function() {

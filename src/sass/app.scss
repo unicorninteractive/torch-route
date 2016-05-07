@@ -68,7 +68,7 @@ main {
 	}
 
 	.timeline {
-		margin: 20px 0 10px;
+		margin: 10px 0 10px;
 	}
 }
 
@@ -125,15 +125,18 @@ main {
 .title-holder {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .share-buttons {
+
 	img {
 		cursor: pointer;
 		width: 2vw;
 		min-width: 20px;
 		height: 2vw;
 		min-height: 20px;
+		margin: 5px 0;
 	}
 }
 
@@ -264,6 +267,12 @@ footer {
 
 	.columns section {
 		margin: 2vw 2vw 0 2vw;
+	}
+
+	section.map {
+		img {
+			width: 100%;
+		}
 	}
 
 	footer {
