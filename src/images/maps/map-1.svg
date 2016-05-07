@@ -667,7 +667,7 @@
                         <circle id="Oval" stroke="#FFF8BD" stroke-width="2" cx="328.91" cy="66.594" r="0.574"></circle>
                         <path d="M328.911,66.594 L313.207,81.818" id="Shape" stroke="#FFF8BD" stroke-width="0.5"></path>
                     </g>
-                    <rect id="Rectangle-path" stroke="#FFFFFF" x="241.39" y="189.347" width="21.969" height="21.969"></rect>
+                    <rect id="Rectangle-path" stroke="#FFFFFF" stroke-width="2" x="241.39" y="189.347" width="21.969" height="21.969"></rect>
                 </g>
             </g>
         </g>
