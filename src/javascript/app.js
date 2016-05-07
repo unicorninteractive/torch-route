@@ -8,7 +8,7 @@ var ptStrings       = require('./pt.json');
 var enStrings       = require('./en.json');
 
 var appLang         = "en";
-var appLocale       = "local";
+var appLocale       = "global";
 var appData         = {};
 var data;
 var dataServer      = "http://54.213.20.132/data.json";
@@ -16,8 +16,8 @@ var dataServer      = "http://54.213.20.132/data.json";
 appData.strings = enStrings;
 appData.date = getMonth();
 appData.langEn = true;
-appData.searchLocal = true;
-appData.searchGlobal = false;
+appData.searchLocal = false;
+appData.searchGlobal = true;
 appData.currentDay = 0;
 appData.maxIndex = 0;
 
