@@ -5,6 +5,7 @@ var svg = d3.select('.timeline')
             .attr('width','100%')
             .attr('height', '90px');
 
+var currentDate;
 var svgElement = svg[0][0];
 var width = svgElement.clientWidth;
 
@@ -18,7 +19,9 @@ function redrawTimeline() {
     width = svgElement.clientWidth;
     endLabel.attr('x', width - 15);
     xScale.range([30, width - 60]);
-    // daySlider.attr('width', xScale())
+    daySlider.attr('width', xScale(currentDate));
+    backgroundRect.attr('width', width - 60);
+    rightArrow.attr('transform', 'translate(' + (width - 20) + ', 30)');
 }
 
 var backgroundRect = svg.append('rect')
@@ -32,7 +35,7 @@ var daySlider = svg.append('rect')
                     .attr('class', 'timeline-fg')
                     .attr('x', 30)
                     .attr('y', 30)
-                    .attr('width', xScale(new Date()))
+                    .attr('width', 0)
                     .attr('height', 30);
 
 var startLabel = svg.append('text')
@@ -70,9 +73,10 @@ scrubber.append('text')
         .attr('y', 16);
 
 function updateTimeline(day) {
-    console.log(day);
+    currentDate = day;
     d3.select('.day-label').text(timeFormat(day));
-    scrubber.attr('transform', 'translate(' + (Math.floor(xScale(day)) - 14) + ', 0)');
+    daySlider.attr('width', xScale(day));
+    scrubber.attr('transform', 'translate(' + (Math.floor(xScale(day)) - 8) + ', 0)');
 }
 
 var debounce = function(fn, timeout) {
@@ -87,7 +91,7 @@ var debounce = function(fn, timeout) {
 
 var debounceDraw = debounce(function() {
     redrawTimeline();
-}, 125);
+}, 100);
 
 d3.select(window).on('resize', debounceDraw);
 

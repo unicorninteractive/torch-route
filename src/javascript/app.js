@@ -69,7 +69,7 @@ request.onload = function() {
 
     for (var x in data) {
       if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
-        appData.currentDay = new Date(data[x].date);
+        appData.currentDay = new Date(data[x].date + " 12:00:00");
         appData.currentIndex = data[x].id;
       }
     }
