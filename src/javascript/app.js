@@ -32,6 +32,7 @@ document.getElementById('en').addEventListener('click', function(e) {
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
     document.getElementById('start-label').innerHTML = enStrings.start_date;
     document.getElementById('end-label').innerHTML = enStrings.start_date;
+    updateTimeline(appData.currentDay);
 });
 
 document.getElementById('pt').addEventListener('click', function(e) {
@@ -43,6 +44,7 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
     document.getElementById('start-label').innerHTML = ptStrings.start_date;
     document.getElementById('end-label').innerHTML = ptStrings.end_date;
+    updateTimeline(appData.currentDay);
 });
 
 document.getElementById('local').addEventListener('click', function(e) {
@@ -245,7 +247,7 @@ scrubber.append('text')
 
 function updateTimeline(day) {
     currentDate = day;
-    d3.select('.day-label').text(timeFormat(day));
+    d3.select('.day-label').text(formatDate(day));
     daySlider.attr('width', xScale(day));
     scrubber.attr('transform', 'translate(' + (Math.floor(xScale(day)) - 8) + ', 0)');
 }
