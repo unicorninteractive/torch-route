@@ -68,7 +68,7 @@ request.onload = function() {
 
     for (var x in data) {
       if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
-        appData.currentDay = new Date(data[x].date + " 12:00:00");
+        appData.currentDay = new Date(data[x].date + "T16:00");
         appData.currentIndex = data[x].id;
         appData.currentMap = "images/maps/map-" + data[x].id + ".svg";
       }
@@ -76,7 +76,7 @@ request.onload = function() {
 
     updateTimeline(appData.currentDay);
     appData.maxIndex = appData.currentIndex;
-    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+    appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
   }
 };
 
@@ -157,16 +157,17 @@ var svg = d3.select('.timeline')
 
 var currentDate;
 var svgElement = svg[0][0];
-var width = svgElement.clientWidth;
+var boundingBox = svgElement.getBoundingClientRect();
+var width = boundingBox.width;
 
 var timeFormat = d3.time.format('%B %e');
 
 var xScale = d3.time.scale()
-        .domain([new Date("2016-5-3"), new Date("2016-8-5")])
+        .domain([new Date("2016-05-03T16:00"), new Date("2016-08-05T16:00")])
         .range([30, width - 60]);
 
 function redrawTimeline() {
-    width = svgElement.clientWidth;
+    width = svgElement.getBoundingClientRect().width;
     endLabel.attr('x', width - 15);
     xScale.range([30, width - 60]);
     daySlider.attr('width', xScale(currentDate));
@@ -209,7 +210,7 @@ var leftArrow = svg.append('path')
                         if (appData.currentIndex > 1) {
                           appData.currentIndex--;
                           appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
-                          console.log(appData.currentIndex);
+                          appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
                         }
                     });
 
@@ -221,6 +222,7 @@ var rightArrow = svg.append('path')
                         if (appData.currentIndex < appData.maxIndex) {
                           appData.currentIndex++;
                           appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
+                          appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
                         }
                     });
 

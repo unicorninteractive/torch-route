@@ -34,31 +34,25 @@
 		</header>
 		<main>
 			<h3>{ strings.subhead } </h3>
-
 			<div class="title-holder">
 				<h1>{ strings.where_is_the_olympic_torch }</h1>
-
 				<div class="share-buttons">
 					<img id="twitter-share" src="images/ui/twitter.svg" />
 					<img id="facebook-share" src="images/ui/facebook.svg" />
 				</div>
 			</div>
-			
 			<div class="timeline">
 			</div>
-
 			<div class="columns">
 				<section class="map">
 					<img rv-src="currentMap" />
 				</section>
 				<section class="questions">
 					<h2>{ strings.top_olympic_searches }</h2>
-
 					<div class="tabs">
 						<span id="local" rv-class-selected="searchLocal">{ strings.brazil }</span>
 						<span id="global" rv-class-selected="searchGlobal">{ strings.world }</span>
 					</div>
-
 					<ol>
 						<li rv-each-question="questions">
 							<a rv-href="question | google" target="_blank">{ question }</a>
@@ -86,10 +80,8 @@
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 	  ga('create', 'UA-72316407-3', 'auto');
 	  ga('send', 'pageview');
-
 	</script>
 </body>
 </html>

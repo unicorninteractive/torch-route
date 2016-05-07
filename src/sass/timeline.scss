@@ -18,6 +18,10 @@ text {
 .left-arrow, .right-arrow {
 	fill: #F19000;
 	cursor: pointer;
+
+	&:hover {
+		fill: #EB7D08;
+	}
 }
 
 .day-label {
