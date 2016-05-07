@@ -3,7 +3,7 @@ text {
 	fill: #C2C5C7;
 }
 
-path {
+.scrubber {
 	fill: #F19000;
 }
 
@@ -13,6 +13,11 @@ path {
 
 .timeline-fg {
 	fill: #F19000;
+}
+
+.left-arrow, .right-arrow {
+	fill: #F19000;
+	cursor: pointer;
 }
 
 .day-label {

@@ -12,25 +12,25 @@ var timeFormat = d3.time.format('%B %e');
 
 var xScale = d3.time.scale()
         .domain([new Date("2016-5-3"), new Date("2016-8-5")])
-        .range([0, width]);
+        .range([30, width - 60]);
 
 function redrawTimeline() {
     width = svgElement.clientWidth;
     endLabel.attr('x', width - 15);
-    xScale.range([0, width]);
+    xScale.range([30, width - 60]);
     // daySlider.attr('width', xScale())
 }
 
 var backgroundRect = svg.append('rect')
                         .attr('class', 'timeline-bg')
-                        .attr('x', 0)
+                        .attr('x', 30)
                         .attr('y', 30)
-                        .attr('width', '100%')
+                        .attr('width', width - 60)
                         .attr('height', 30);
 
 var daySlider = svg.append('rect')
                     .attr('class', 'timeline-fg')
-                    .attr('x', 0)
+                    .attr('x', 30)
                     .attr('y', 30)
                     .attr('width', xScale(new Date()))
                     .attr('height', 30);
@@ -45,12 +45,23 @@ var endLabel = svg.append('text')
                     .attr('id', 'end-label')
                     .attr('y', '80px')
                     .attr('text-anchor', 'end')
-                    .attr('x', width - 15);
+                    .attr('x', (width - 15) + "px");
+
+var leftArrow = svg.append('path')
+                    .attr('d', 'M20 0 L20 30 L0 15 Z')
+                    .attr('transform', 'translate(0, 30)')
+                    .attr('class', 'left-arrow');
+
+var rightArrow = svg.append('path')
+                    .attr('d', 'M0 0 L20 15 L0 30 Z')
+                    .attr('transform', 'translate(' + (width - 20) + ', 30)')
+                    .attr('class', 'right-arrow');
 
 var scrubber = svg.append('g');
 
 var dateLabel = scrubber.append("path")
-    .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z');
+    .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z')
+    .attr('class', 'scrubber');
 
 scrubber.append('text')
         .attr('class', 'day-label')
@@ -59,6 +70,7 @@ scrubber.append('text')
         .attr('y', 16);
 
 function updateTimeline(day) {
+    console.log(day);
     d3.select('.day-label').text(timeFormat(day));
     scrubber.attr('transform', 'translate(' + (Math.floor(xScale(day)) - 14) + ', 0)');
 }
