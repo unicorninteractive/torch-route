@@ -14,7 +14,7 @@ var data;
 var dataServer      = "http://54.213.20.132/data.json";
 
 appData.strings = enStrings;
-appData.date = getMonth();
+appData.date = formatDate();
 appData.langEn = true;
 appData.searchLocal = false;
 appData.searchGlobal = true;
@@ -27,7 +27,7 @@ document.getElementById('en').addEventListener('click', function(e) {
     appData.langEn = true;
     appData.langPt = false;
     appLang = "en";
-    appData.date = getMonth();
+    appData.date = formatDate(appData.currentDay);
     appData.strings = enStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
     document.getElementById('start-label').innerHTML = enStrings.start_date;
@@ -38,7 +38,7 @@ document.getElementById('pt').addEventListener('click', function(e) {
     appData.langPt = true;
     appData.langEn = false;
     appLang = "pt";
-    appData.date = getMonth();
+    appData.date = formatDate(appData.currentDay);
     appData.strings = ptStrings;
     appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
     document.getElementById('start-label').innerHTML = ptStrings.start_date;
@@ -69,6 +69,7 @@ request.onload = function() {
     for (var x in data) {
       if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
         appData.currentDay = new Date(data[x].date + "T16:00");
+        appData.date = formatDate(appData.currentDay);
         appData.currentIndex = data[x].id;
         appData.currentMap = "images/maps/map-" + data[x].id + ".svg";
       }
@@ -87,8 +88,8 @@ function parseQuestions(string) {
     return stringArray;
 }
 
-function getMonth() {
-    var d = new Date();
+function formatDate(day) {
+    var d = new Date(day);
     var month = [];
     month[4] = enStrings.may;
     month[5] = enStrings.june;
