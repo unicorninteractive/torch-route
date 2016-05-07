@@ -22,6 +22,7 @@ function redrawTimeline() {
     daySlider.attr('width', xScale(currentDate));
     backgroundRect.attr('width', width - 60);
     rightArrow.attr('transform', 'translate(' + (width - 20) + ', 30)');
+    scrubber.attr('transform', 'translate(' + (Math.floor(xScale(currentDate)) - 8) + ', 0)');
 }
 
 var backgroundRect = svg.append('rect')
