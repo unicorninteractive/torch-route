@@ -11,7 +11,7 @@ gulp.task('clean', ['build'], function() {
 
 gulp.task('copy', ['clean'], function() {
     var revAll = new RevAll({
-        dontRenameFile: ['.html', /^\/favicon.ico$/g, /^\/boot.js/g, /map/, /share-image/, /share-video/],
+        dontRenameFile: ['.html', /^\/favicon.png$/g, /^\/favicon.ico$/g, /^\/boot.js/g, /map/, /share-image/, /share-video/],
         dontSearchFile: [/container.html/, 'embed/map/index.html', 'embed/questions/index.html'],
         prefix: global.previewUrl || p.previewUrl
     });
