@@ -12,7 +12,7 @@
   		margin: 0 0 0 0;
   		padding: 0;
   		font-family: "Roboto";
-  		background-color: #002C45;
+  		background-color: #002337;
   	}
 
   	h2 {
@@ -64,6 +64,10 @@
   </style>
 </head>
 <body>
+	<section class="map">
+		<a href="http://googletrends.github.io/olympic-torch/" target="_top"><img src="" id="current-map" style="height: 100%; margin: 0 auto; display: block;" /></a>
+	</section>
+
 	<section class="questions">
 		<h2>Top Olympic Searches</h2>
 		<ol id="questions-list">
@@ -100,6 +104,8 @@
 		    for (var i in appData.questions) {
 		    	questionString += "<li><a target='_blank' href='https://www.google.com/search?q=" + encodeURIComponent(appData.questions[i]) + "'>" + appData.questions[i] + "</a></li>";
 		    }
+
+		    document.getElementById('current-map').src = "../../images/maps/map-" + appData.maxIndex + ".svg";
 
 		    document.getElementById('questions-list').innerHTML = questionString;
 		  }
