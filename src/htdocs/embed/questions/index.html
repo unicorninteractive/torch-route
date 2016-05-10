@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Where is the Olympic Torch? - Google Trends</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <style>
+  	@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+  	html,body {
+  		height: 100%;
+  		margin: 0 0 0 0;
+  		padding: 0;
+  		font-family: "Roboto";
+  		background-color: #002337;
+  	}
+
+  	h2 {
+  		color: #EB7D08;
+  		margin-top: 1em;
+  		font-weight: 300;
+  		text-align: center;
+  	}
+
+  	img {
+  		margin: 0 auto;
+  		display: block;
+  	}
+
+
+	ol {
+		padding-bottom: 40px;
+		counter-reset: item;
+		list-style-type: none;
+		margin-left: 10px;
+		padding-left: 0;
+	}
+
+
+	li {
+		font-weight: 300;
+		margin-bottom: 1vw;
+		font-size: 18px;
+		text-transform: none;
+		line-height: 35px;
+		display: table-row;
+		margin-left: 10px;
+	}
+
+	li:before {
+		content: counter(item) " ";
+		counter-increment: item;
+		color: orange;
+		margin-right: 10px;
+		margin-left: 10px;
+		padding-right: 10px;
+		display: table-cell;
+	}
+
+	li a {
+		text-decoration: none;
+		color: #D8D8D8;
+	}
+  </style>
+</head>
+<body>
+	<section class="questions">
+		<h2>Top Olympic Searches</h2>
+		<ol id="questions-list">
+		</ol>
+		<img src="../../images/ui/trends.svg" width="120" />
+	</section>
+
+	<script>
+		var appData = {};
+		var request = new XMLHttpRequest();
+		request.open('GET', 'http://54.213.20.132/data.json', true);
+
+
+		function parseQuestions(string) {
+		    var stringArray = string.split(/\r?\n/);
+		    return stringArray;
+		}
+
+		request.onload = function() {
+		  if (request.status >= 200 && request.status < 400) {
+		    data = JSON.parse(request.responseText);
+
+		    for (var x in data) {
+		      if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
+		        appData.currentDay = new Date(data[x].date + "T16:00");
+		        appData.currentIndex = data[x].id;
+		      }
+		    }
+
+		    appData.maxIndex = appData.currentIndex;
+		    appData.questions = parseQuestions(data[appData.currentIndex - 1]["en_global"]);
+
+		    var questionString = "";
+		    for (var i in appData.questions) {
+		    	questionString += "<li><a target='_blank' href='https://www.google.com/search?q=" + encodeURIComponent(appData.questions[i]) + "'>" + appData.questions[i] + "</a></li>";
+		    }
+
+		    document.getElementById('questions-list').innerHTML = questionString;
+		  }
+		};
+
+		request.send();
+	</script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-72316407-3', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</body>
+</html>
