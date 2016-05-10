@@ -72,7 +72,7 @@
 		<h2>Top Olympic Searches</h2>
 		<ol id="questions-list">
 		</ol>
-		<img src="../../images/ui/trends.svg" width="120" />
+		<img src="../images/ui/trends.svg" width="120" />
 	</section>
 
 	<script>
@@ -105,7 +105,7 @@
 		    	questionString += "<li><a target='_blank' href='https://www.google.com/search?q=" + encodeURIComponent(appData.questions[i]) + "'>" + appData.questions[i] + "</a></li>";
 		    }
 
-		    document.getElementById('current-map').src = "../../images/maps/map-" + appData.maxIndex + ".svg";
+		    document.getElementById('current-map').src = "../images/maps/map-" + appData.maxIndex + ".svg";
 
 		    document.getElementById('questions-list').innerHTML = questionString;
 		  }
