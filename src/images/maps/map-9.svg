@@ -80,7 +80,6 @@
                             <g id="mask-2" transform="translate(0.000000, 0.000000)">
                                 <rect id="path-1" x="0.270396226" y="0.74" width="137.782755" height="143.184"></rect>
                             </g>
-                            <g id="SVGID_19_" transform="translate(0.000000, 0.000000)"></g>
                             <g id="Shape-Clipped" transform="translate(0.000000, 0.000000)">
                                 <mask id="mask-2" fill="white">
                                     <use xlink:href="#path-1"></use>
@@ -238,7 +237,6 @@
                             <g id="mask-20" transform="translate(0.000000, 0.000000)">
                                 <rect id="path-19" x="0.270396226" y="0.74" width="137.782755" height="143.184"></rect>
                             </g>
-                            <g id="SVGID_19_" transform="translate(0.000000, 0.000000)"></g>
                             <g id="Shape-Clipped" transform="translate(0.000000, 0.000000)">
                                 <mask id="mask-20" fill="white">
                                     <use xlink:href="#path-19"></use>
@@ -248,11 +246,10 @@
                             </g>
                         </g>
                         <g id="Clipped" transform="translate(0.000000, 0.000000)">
-                            <g id="mask-22">
+                            <g id="mask-22" transform="translate(0.000000, 0.000000)">
                                 <rect id="path-21" x="0.270396226" y="0.74" width="137.782755" height="143.184"></rect>
                             </g>
-                            <g id="SVGID_19_"></g>
-                            <g id="Naque-Clipped">
+                            <g id="Naque-Clipped" transform="translate(0.000000, 0.000000)">
                                 <mask id="mask-22" fill="white">
                                     <use xlink:href="#path-21"></use>
                                 </mask>
