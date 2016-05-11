@@ -13,7 +13,6 @@
         <rect id="path-13" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
         <rect id="path-15" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
         <rect id="path-17" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
-        <rect id="path-19" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="map-5" transform="translate(1.000000, 0.000000)">
@@ -866,7 +865,6 @@
                                         <g id="mask-18">
                                             <rect id="path-17" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
                                         </g>
-                                        <g id="path-19"></g>
                                         <g>
                                             <mask id="mask-18" fill="white">
                                                 <use xlink:href="#path-17"></use>
@@ -876,26 +874,11 @@
                                         </g>
                                     </g>
                                 </g>
-                                <g id="Clipped" transform="translate(2.000000, 1.000000)">
-                                    <g id="mask-22">
-                                        <rect id="path-21" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
-                                    </g>
-                                    <g id="SVGID_11_">
-                                        <rect id="path-21" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
-                                    </g>
-                                    <g id="Shape-Clipped">
-                                        <g id="mask-20">
-                                            <rect id="path-19" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
-                                        </g>
-                                        <g id="path-21"></g>
-                                        <g>
-                                            <mask id="mask-20" fill="white">
-                                                <use xlink:href="#path-19"></use>
-                                            </mask>
-                                            <g id="path-19"></g>
-                                            <path d="M64.949,129.028 C64.949,131.602 62.851,133.686 60.281,133.686 C57.683,133.686 55.605,131.602 55.605,129.028 C55.605,126.45 57.683,124.362 60.281,124.362 C62.852,124.362 64.949,126.45 64.949,129.028 L64.949,129.028 L64.949,129.028 L64.949,129.028 Z" id="Shape" fill="#F29100" mask="url(#mask-20)"></path>
-                                        </g>
-                                    </g>
+                                <g id="mask-22" transform="translate(2.000000, 1.000000)">
+                                    <rect id="path-21" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
+                                </g>
+                                <g id="SVGID_11_" transform="translate(2.000000, 1.000000)">
+                                    <rect id="path-21" x="0.281" y="0.74" width="143.186" height="143.184"></rect>
                                 </g>
                             </g>
                         </g>
