@@ -21,11 +21,13 @@ gulp.task('copy', ['clean'], function() {
             .pipe(gulp.dest('dist'));
 });
 
-gulp.task('dist', ['copy'], function() {
-    gulp.src('./dist/*.css')
-        .pipe(minifycss())
+gulp.task('process-css', ['copy'], function() {
+    return gulp.src('./dist/*.css')
+        .pipe(minifycss({processImport: false}))
         .pipe(gulp.dest('dist'));
+});
 
+gulp.task('dist', ['process-css'], function() {
     return gulp.src('./dist/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
