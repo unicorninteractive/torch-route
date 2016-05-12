@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "url": "http://googletrends.github.io/olympic-torch/",
-  "publishUrl": "git@github.com/googletrends/olympic-torch.git",
+  "publishUrl": "git@github.com:googletrends/olympic-torch.git",
   "description": "Follow the route of the Olympic Torch across Brazil",
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "gulp-util": "*",
     "lodash": "*",
     "pretty-hrtime": "*",
-    "q": "^1.4.1",
     "require-dir": "*",
     "underscore": "*",
     "vinyl-source-stream": "*",
