@@ -12,7 +12,7 @@ gulp.task('publish', ['dist'], function() {
 
     gutil.log('Publishing project to:', gutil.colors.green(p.publishUrl));
     
-    execSync('git add -A && git commit -m "Automated publish" && git push --dry-run', {cwd: 'dist/'});
+    execSync('git add -A && git commit -m "Automated publish" && git push', {cwd: 'dist/'});
 
     gutil.log('Project published');
 
