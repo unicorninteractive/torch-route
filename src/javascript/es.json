@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-=======
-
->>>>>>> 992608c... fixed map 10
 	"header_english": "inglés",
 	"header_portuguese": "portugués",
-	"where_is_the_olympic_torch": "Dónde está la antorcha olímpica?",
+	"where_is_the_olympic_torch": "Dónde está la llama olímpica?",
 	"today": "Hoy",
-	"top_olympic_searches": "BÚSQUEDAS MÁS POPULARES SOBRE LOS JUEGOS OLÍMPICOS",
+	"top_olympic_searches": "búsquedas más populares sobre los juegos olímpicos",
 	"brazil": "En Brasil",
 	"world": "En todo el mundo",
 	"footer": "Diseñado con ♥ por Unicorn Interactive",
@@ -18,7 +14,7 @@
 	"july": "julio",
 	"august": "agosto",
 	"embed": "Insertar vínculo",
-	"subhead": "Explora búsquedas en Google en tiempo real mientras la antorcha olímpica viaja a través de Brasil",
+	"subhead": "Explora búsquedas en Google en tiempo real mientras la llama olímpica viaja a través de Brasil",
 	"twitter_share_text": "Sigue la llama %23olimpica con este interactivo de @GoogleTrends",
 	"facebook_share_text": "Sigue la llama #olimpica con este interactivo de @GoogleTrends"
 }
