@@ -29,4 +29,9 @@ text {
 
 .day-label {
 	fill: $background;
+	pointer-events: none;
+}
+
+.scrubber {
+	cursor: pointer;
 }

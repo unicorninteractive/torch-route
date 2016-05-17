@@ -3,9 +3,11 @@ var rivets          = require('rivets');
 var dialog          = require('dialog-polyfill');
 var d3              = require('d3');
 
-// Localization files
-var ptStrings       = require('./pt.json');
-var enStrings       = require('./en.json');
+var translations    = require('./translations.json');
+
+var ptStrings       = translations.pt;
+var enStrings       = translations.en;
+var esStrings       = translations.es;
 
 var appLang         = "en";
 var appLocale       = "global";
@@ -25,6 +27,7 @@ rivets.bind(document.getElementById('app'), appData);
 
 document.getElementById('en').addEventListener('click', function(e) {
     appData.langEn = true;
+    appData.langEs = false;
     appData.langPt = false;
     appLang = "en";
     appData.date = formatDate(appData.currentDay);
@@ -37,6 +40,7 @@ document.getElementById('en').addEventListener('click', function(e) {
 
 document.getElementById('pt').addEventListener('click', function(e) {
     appData.langPt = true;
+    appData.langEs = false;
     appData.langEn = false;
     appLang = "pt";
     appData.date = formatDate(appData.currentDay);
@@ -45,6 +49,15 @@ document.getElementById('pt').addEventListener('click', function(e) {
     document.getElementById('start-label').innerHTML = ptStrings.start_date;
     document.getElementById('end-label').innerHTML = ptStrings.end_date;
     updateTimeline(appData.currentDay);
+});
+
+document.getElementById('es').addEventListener('click', function(e) {
+  appData.langPt = false;
+  appData.langEn = false;
+  appData.langEs = true;
+  appLang = "es";
+  appData.date = formatDate(appData.currentDay);
+  appData.strings = esStrings;
 });
 
 document.getElementById('local').addEventListener('click', function(e) {
@@ -172,11 +185,24 @@ var xScale = d3.time.scale()
 function redrawTimeline() {
     width = svgElement.getBoundingClientRect().width;
     endLabel.attr('x', width - 15);
-    xScale.range([30, width - 60]);
-    daySlider.attr('width', xScale(currentDate));
-    backgroundRect.attr('width', width - 60);
-    rightArrow.attr('transform', 'translate(' + (width - 20) + ', 30)');
-    scrubber.attr('transform', 'translate(' + (Math.floor(xScale(currentDate)) - 8) + ', 0)');
+    // xScale.range([30, width - 60]);
+    // daySlider.attr('width', xScale(currentDate));
+    // backgroundRect.attr('width', width - 60);
+    // rightArrow.attr('transform', 'translate(' + (width - 20) + ', 30)');
+    scrubber.attr('transform', 'translate(' + xScale(currentDate) + ', 0)');
+}
+
+function brushed() {
+
+  var value = brush.extent()[1];
+
+  if (d3.event.sourceEvent) {
+    value = xScale.invert(d3.mouse(this)[0]);
+  }
+
+  scrubber.attr('transform', 'translate(' + xScale(value) + ', 0)');
+
+  // updateTimeline(brush.extent()[1]);
 }
 
 var backgroundRect = svg.append('rect')
@@ -185,6 +211,11 @@ var backgroundRect = svg.append('rect')
                         .attr('y', 30)
                         .attr('width', width - 60)
                         .attr('height', 20);
+
+var brush = d3.svg.brush()
+            .x(xScale)
+            .extent([new Date("2016-05-03T16:00"), new Date("2016-08-05T16:00")])
+            .on("brush", brushed);
 
 var daySlider = svg.append('rect')
                     .attr('class', 'timeline-fg')
@@ -233,7 +264,7 @@ var rightArrow = svg.append('path')
                         }
                     });
 
-var scrubber = svg.append('g');
+var scrubber = svg.append('g').call(brush);
 
 var dateLabel = scrubber.append("path")
     .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z')
