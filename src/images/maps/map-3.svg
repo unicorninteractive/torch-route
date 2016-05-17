@@ -88,7 +88,7 @@
                     <polyline id="Shape" stroke="#FFF8BD" stroke-width="0.5" points="254.816 245.208 254.783 246.339 255.166 249.223 253.3 249.273 252.4 249.923 251.283 249.588 253.52 251.019 254.466 250.239"></polyline>
                     <polyline id="Shape" stroke="#FFF8BD" stroke-width="0.5" points="254.466 250.239 249.134 250.323 249.134 249.124 247.302 249.34 246.051 249.457 245.085 250.005 244.285 250.857"></polyline>
                     <polyline id="Shape" stroke="#FFF8BD" stroke-width="0.5" points="244.285 250.857 241.921 249.25 240.795 249.549 239.664 249.923 241.175 248.328 239.839 248.512 242.09 250.679"></polyline>
-                    <circle id="Oval" stroke="#F29100" stroke-width="2" fill="#F29100" cx="193.458" cy="181.18" r="0.574"></circle>
+                    <path d="M193.458,181.754 C193.775011,181.754 194.032,181.497011 194.032,181.18 C194.032,180.862989 193.775011,180.606 193.458,180.606 C193.140989,180.606 192.884,180.862989 192.884,181.18 C192.884,181.497011 193.140989,181.754 193.458,181.754 Z" id="Oval" stroke="#F29100" stroke-width="2" fill="#F29100"></path>
                     <g id="Group" transform="translate(183.000000, 181.000000)" stroke="#F29100" fill="#F29100">
                         <path d="M4.271,1.236 C4.271,1.55 4.014,1.808 3.697,1.808 C3.381,1.808 3.123,1.55 3.123,1.236 C3.123,0.917 3.381,0.66 3.697,0.66 C4.014,0.66 4.271,0.917 4.271,1.236 L4.271,1.236 L4.271,1.236 L4.271,1.236 L4.271,1.236 Z" id="Shape" stroke-width="0.5"></path>
                         <ellipse id="Oval" stroke-width="2" cx="0.603" cy="0.826" rx="0.573" ry="0.573"></ellipse>
@@ -102,58 +102,58 @@
                     </g>
                     <polyline id="Shape" stroke="#F29100" points="183.715 186.638 175.337 183.501 172.069 182.603 177.67 186.57 180.636 190.333"></polyline>
                     <polyline id="Shape" stroke="#F29100" points="193.459 181.18 186.696 182.236 183.603 181.826 183.715 186.638"></polyline>
-                    <g id="Group" transform="translate(177.000000, 189.000000)" stroke="#F29100" fill="#F29100">
+                    <g id="Group" transform="translate(177.000000, 189.000000)" stroke="#FFF8BD">
                         <path d="M2.118,0.908 C2.118,1.222 1.86,1.48 1.543,1.48 C1.227,1.48 0.972,1.222 0.972,0.908 C0.972,0.589 1.227,0.332 1.543,0.332 C1.86,0.332 2.118,0.588 2.118,0.908 L2.118,0.908 L2.118,0.908 L2.118,0.908 L2.118,0.908 Z" id="Shape" stroke-width="0.5"></path>
                         <ellipse id="Oval" stroke-width="2" cx="3.749" cy="2.724" rx="0.574" ry="0.574"></ellipse>
                         <ellipse id="Oval" stroke-width="2" cx="6.065" cy="7.904" rx="0.574" ry="0.574"></ellipse>
                         <ellipse id="Oval" stroke-width="2" cx="5.042" cy="12.47" rx="0.574" ry="0.574"></ellipse>
                         <ellipse id="Oval" stroke-width="2" cx="10.087" cy="12.583" rx="0.574" ry="0.574"></ellipse>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="180.636 190.333 178.543 189.908 180.747 191.724 183.064 196.904 182.044 201.47 187.086 201.583"></polyline>
-                    <g id="Group" transform="translate(189.000000, 195.000000)" stroke="#F29100" fill="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="180.636 190.333 178.543 189.908 180.747 191.724 183.064 196.904 182.044 201.47 187.086 201.583"></polyline>
+                    <g id="Group" transform="translate(189.000000, 195.000000)" stroke="#FFF8BD">
                         <path d="M1.935,1.254 C1.935,1.568 1.678,1.826 1.361,1.826 C1.044,1.826 0.787,1.568 0.787,1.254 C0.787,0.935 1.044,0.679 1.361,0.679 C1.678,0.679 1.935,0.935 1.935,1.254 L1.935,1.254 L1.935,1.254 L1.935,1.254 L1.935,1.254 Z" id="Shape" stroke-width="0.5"></path>
                         <path d="M3.185,5.233 C3.185,5.552 2.928,5.809 2.612,5.809 C2.295,5.809 2.039,5.552 2.039,5.233 C2.039,4.919 2.295,4.662 2.612,4.662 C2.928,4.662 3.185,4.918 3.185,5.233 L3.185,5.233 L3.185,5.233 L3.185,5.233 L3.185,5.233 Z" id="Shape" stroke-width="0.5"></path>
                         <circle id="Oval" stroke-width="2" cx="3.12" cy="9.124" r="0.573"></circle>
                         <ellipse id="Oval" stroke-width="2" cx="2.287" cy="14.03" rx="0.574" ry="0.574"></ellipse>
                         <ellipse id="Oval" stroke-width="2" cx="1.36" cy="16.529" rx="0.574" ry="0.574"></ellipse>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="187.086 201.583 190.36 196.254 191.611 200.233 192.121 204.124 191.287 209.03 190.36 211.529"></polyline>
-                    <g id="Oval" transform="translate(193.000000, 207.000000)" stroke-width="2" stroke="#F29100" fill="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="187.086 201.583 190.36 196.254 191.611 200.233 192.121 204.124 191.287 209.03 190.36 211.529"></polyline>
+                    <g id="Oval" transform="translate(193.000000, 207.000000)" stroke-width="2" stroke="#FFF8BD" fill="#FFF8BD">
                         <circle cx="0.805" cy="14.5" r="0.574"></circle>
                         <circle cx="10.924" cy="12.805" r="0.574"></circle>
                         <circle cx="13.082" cy="7.256" r="0.574"></circle>
                         <circle cx="10.359" cy="5.306" r="0.574"></circle>
                         <circle cx="15.251" cy="1.313" r="0.575"></circle>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="190.36 211.529 193.806 221.5 203.924 219.805 206.082 214.256 203.359 212.306 208.252 208.313"></polyline>
-                    <g id="Oval" transform="translate(214.000000, 190.000000)" stroke-width="2" stroke="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="190.36 211.529 193.806 221.5 203.924 219.805 206.082 214.256 203.359 212.306 208.252 208.313"></polyline>
+                    <g id="Oval" transform="translate(214.000000, 190.000000)" stroke-width="2" stroke="#FFF8BD">
                         <circle cx="0.816" cy="17.847" r="0.574"></circle>
                         <circle cx="9.881" cy="6.848" r="0.575"></circle>
                         <circle cx="20.879" cy="0.784" r="0.574"></circle>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="208.252 208.313 214.816 207.847 223.882 196.848 234.879 190.784"></polyline>
-                    <g id="Oval" transform="translate(228.000000, 194.000000)" stroke-width="2" stroke="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="208.252 208.313 214.816 207.847 223.882 196.848 234.879 190.784"></polyline>
+                    <g id="Oval" transform="translate(228.000000, 194.000000)" stroke-width="2" stroke="#FFF8BD">
                         <circle cx="7.256" cy="0.864" r="0.574"></circle>
                         <circle cx="10.716" cy="10.927" r="0.573"></circle>
                         <circle cx="9.082" cy="11.119" r="0.574"></circle>
                         <circle cx="1.233" cy="17.967" r="0.574"></circle>
                         <circle cx="9.392" cy="12.695" r="0.574"></circle>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="234.879 190.784 235.256 194.864 238.717 204.927 237.391 206.695 237.081 205.119 229.233 211.967"></polyline>
-                    <g id="Oval" transform="translate(236.000000, 207.000000)" stroke-width="2" stroke="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="234.879 190.784 235.256 194.864 238.717 204.927 237.391 206.695 237.081 205.119 229.233 211.967"></polyline>
+                    <g id="Oval" transform="translate(236.000000, 207.000000)" stroke-width="2" stroke="#FFF8BD">
                         <ellipse cx="0.688" cy="1.572" rx="0.573" ry="0.573"></ellipse>
                         <ellipse cx="3.509" cy="3.153" rx="0.574" ry="0.574"></ellipse>
                         <ellipse cx="7.954" cy="5.036" rx="0.574" ry="0.574"></ellipse>
                         <ellipse cx="17.793" cy="5.831" rx="0.573" ry="0.573"></ellipse>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="229.233 211.967 236.689 208.572 239.51 210.153 243.956 212.036 253.793 212.831"></polyline>
-                    <g id="Group" transform="translate(240.000000, 216.000000)" stroke="#F29100">
+                    <polyline id="Shape" stroke="#FFF8BD" points="229.233 211.967 236.689 208.572 239.51 210.153 243.956 212.036 253.793 212.831"></polyline>
+                    <g id="Group" transform="translate(240.000000, 216.000000)" stroke="#FFF8BD">
                         <circle id="Oval" stroke-width="2" cx="10.194" cy="0.882" r="0.574"></circle>
                         <circle id="Oval" stroke-width="2" cx="8.033" cy="3.461" r="0.575"></circle>
                         <path d="M6.993,3.579 C6.993,3.893 6.736,4.151 6.42,4.151 C6.103,4.151 5.846,3.893 5.846,3.579 C5.846,3.26 6.103,3.004 6.42,3.004 C6.736,3.003 6.993,3.259 6.993,3.579 L6.993,3.579 L6.993,3.579 L6.993,3.579 L6.993,3.579 Z" id="Shape"></path>
                         <circle id="Oval" stroke-width="2" cx="1.122" cy="5.132" r="0.574"></circle>
                     </g>
-                    <polyline id="Shape" stroke="#F29100" points="253.28 214.069 250.194 216.882 248.032 219.461 246.42 219.579 241.12 221.132"></polyline>
+                    <polyline id="Shape" stroke="#FFF8BD" points="253.28 214.069 250.194 216.882 248.032 219.461 246.42 219.579 241.12 221.132"></polyline>
                     <g id="Oval" transform="translate(234.000000, 227.000000)" stroke-width="2" stroke="#FFF8BD">
                         <circle cx="4.54" cy="2.217" r="0.574"></circle>
                         <circle cx="1.44" cy="0.714" r="0.574"></circle>
@@ -620,7 +620,7 @@
                     <circle id="Oval" stroke="#FFF8BD" stroke-width="2" cx="328.402" cy="66.594" r="0.574"></circle>
                     <path d="M328.403,66.594 L312.699,81.818" id="Shape" stroke="#FFF8BD" stroke-width="0.5"></path>
                 </g>
-                <rect id="Rectangle-path" stroke="#FFFFFF" stroke-width="2" x="299.216" y="226.488" width="20.55" height="20.549"></rect>
+                <rect id="Rectangle-path" stroke="#FFFFFF" stroke-width="2" x="231" y="193" width="20.55" height="20.549"></rect>
             </g>
             <rect id="Mapa-pequeno" stroke="#FFFFFF" stroke-width="2" x="5.281" y="216.74" width="143.186" height="143.184"></rect>
             <g id="map-peq" transform="translate(17.000000, 225.000000)">
