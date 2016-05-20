@@ -295,8 +295,8 @@ var dateLabel = scrubber.append("path")
 scrubber.append('text')
         .attr('class', 'day-label')
         .attr('text-anchor', 'middle')
-        .attr('x', 34)
-        .attr('y', 16);
+        .attr('x', 39)
+        .attr('y', 17);
 
 function updateTimeline(day) {
     currentDate = day;
