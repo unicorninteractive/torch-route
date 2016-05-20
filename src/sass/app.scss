@@ -113,10 +113,6 @@ h1 {
 	}
 }
 
-footer {
-	color: #A5A6A6;
-}
-
 main {
 	margin: 0 2vw;
 }
@@ -245,17 +241,12 @@ section.questions {
 footer {
 	font-family: "Roboto";
 	margin-top: 30px;
-	text-align: right;
+	text-align: center;
 	margin-right: 2vw;
 	margin-bottom: 4vw;
 
 	a {
 		text-decoration: none;
-		color: gray;
-
-		&:hover {
-			border-bottom: 1px solid gray;
-		}
 	}
 }
 
