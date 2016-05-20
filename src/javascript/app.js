@@ -51,14 +51,14 @@ document.getElementById('pt').addEventListener('click', function(e) {
     updateTimeline(appData.currentDay);
 });
 
-document.getElementById('es').addEventListener('click', function(e) {
-  appData.langPt = false;
-  appData.langEn = false;
-  appData.langEs = true;
-  appLang = "es";
-  appData.date = formatDate(appData.currentDay);
-  appData.strings = esStrings;
-});
+// document.getElementById('es').addEventListener('click', function(e) {
+//   appData.langPt = false;
+//   appData.langEn = false;
+//   appData.langEs = true;
+//   appLang = "es";
+//   appData.date = formatDate(appData.currentDay);
+//   appData.strings = esStrings;
+// });
 
 document.getElementById('local').addEventListener('click', function(e) {
     appData.searchLocal = true;
@@ -264,7 +264,8 @@ var rightArrow = svg.append('path')
                         }
                     });
 
-var scrubber = svg.append('g').call(brush);
+var scrubber = svg.append('g');
+// var scrubber = svg.append('g').call(brush);
 
 var dateLabel = scrubber.append("path")
     .attr('d','M29,23 L37,37 L47,23 L78,23 L78,0 L0,0 L0,23 L29,23 Z')
