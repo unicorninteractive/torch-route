@@ -240,29 +240,50 @@ var leftArrow = svg.append('path')
                     .attr('d', 'M20 0 L20 20 L0 10 Z')
                     .attr('transform', 'translate(0, 30)')
                     .attr('class', 'left-arrow')
-                    .on('click', function() {
-                        if (appData.currentIndex > 1) {
-                          appData.currentIndex--;
-                          appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
-                          appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
-                          appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
-                          updateTimeline(appData.currentDay);
-                        }
-                    });
+                    .on('click', previousDay);
 
 var rightArrow = svg.append('path')
                     .attr('d', 'M0 0 L20 10 L0 20 Z')
                     .attr('transform', 'translate(' + (width - 20) + ', 30)')
                     .attr('class', 'right-arrow')
-                    .on('click', function() {
-                        if (appData.currentIndex < appData.maxIndex) {
-                          appData.currentIndex++;
-                          appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
-                          appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
-                          appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
-                          updateTimeline(appData.currentDay);
-                        }
-                    });
+                    .on('click', nextDay);
+
+function previousDay() {
+  if (appData.currentIndex > 1) {
+    appData.currentIndex--;
+    appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
+    appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
+    appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
+    updateTimeline(appData.currentDay);
+  }
+}
+
+function nextDay() {
+  if (appData.currentIndex < appData.maxIndex) {
+    appData.currentIndex++;
+    appData.currentDay = new Date(data[appData.currentIndex - 1].date + "T16:00");
+    appData.currentMap = "images/maps/map-" + appData.currentIndex + ".svg";
+    appData.questions = parseQuestions(data[appData.currentIndex - 1][appLang + "_" + appLocale]);
+    updateTimeline(appData.currentDay);
+  }
+}
+
+document.onkeydown = function(e) {
+  e = e || window.event;
+
+  switch(e.which || e.keyCode) {
+        case 37:
+        previousDay();
+        break;
+
+        case 39:
+        nextDay();
+        break;
+
+        default: return;
+    }
+    e.preventDefault();
+};
 
 var scrubber = svg.append('g');
 // var scrubber = svg.append('g').call(brush);
