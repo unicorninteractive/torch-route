@@ -51,14 +51,18 @@ document.getElementById('pt').addEventListener('click', function(e) {
     updateTimeline(appData.currentDay);
 });
 
-// document.getElementById('es').addEventListener('click', function(e) {
-//   appData.langPt = false;
-//   appData.langEn = false;
-//   appData.langEs = true;
-//   appLang = "es";
-//   appData.date = formatDate(appData.currentDay);
-//   appData.strings = esStrings;
-// });
+document.getElementById('es').addEventListener('click', function(e) {
+    appData.langPt = false;
+    appData.langEs = true;
+    appData.langEn = false;
+    appLang = "es";
+    appData.date = formatDate(appData.currentDay);
+    appData.strings = esStrings;
+    appData.questions = parseQuestions(data[0][appLang + "_" + appLocale]);
+    document.getElementById('start-label').innerHTML = esStrings.start_date;
+    document.getElementById('end-label').innerHTML = esStrings.end_date;
+    updateTimeline(appData.currentDay);
+});
 
 document.getElementById('local').addEventListener('click', function(e) {
     appData.searchLocal = true;
@@ -82,7 +86,7 @@ request.onload = function() {
     data = JSON.parse(request.responseText);
 
     for (var x in data) {
-      if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local) {
+      if (data[x].en_global && data[x].en_local && data[x].pt_global && data[x].pt_local && data[x].es_global && data[x].es_local) {
         appData.currentDay = new Date(data[x].date + "T16:00");
         appData.date = formatDate(appData.currentDay);
         appData.currentIndex = data[x].id;
@@ -116,6 +120,13 @@ function formatDate(day) {
       month[5] = ptStrings.june;
       month[6] = ptStrings.july;
       month[7] = ptStrings.august;
+    }
+
+    if (appLang == "es") {
+      month[4] = esStrings.may;
+      month[5] = esStrings.june;
+      month[6] = esStrings.july;
+      month[7] = esStrings.august;
     }
 
     return month[d.getMonth()] + " " + d.getDate();
