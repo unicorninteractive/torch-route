@@ -13,7 +13,7 @@ var appLang         = "en";
 var appLocale       = "global";
 var appData         = {};
 var data;
-var dataServer      = "http://54.213.20.132/data.json";
+var dataUrl      = "data.json";
 
 appData.strings = enStrings;
 appData.date = formatDate();
@@ -79,7 +79,7 @@ document.getElementById('global').addEventListener('click', function(e) {
 });
 
 var request = new XMLHttpRequest();
-request.open('GET', dataServer, true);
+request.open('GET', dataUrl, true);
 
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
